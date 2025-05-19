@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>プログラミング初心者の君へ｜学び仲間と出会えるオフ会</title>
+    <meta
+      name="description"
+      content="RPG風デザインでオフ会を楽しく紹介。プログラミング学習中の仲間とつながる第一歩を応援する参加者募集サイトです。"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/style3.css" />
+  </head>
+
+  <body>
+    <header id="header">
+      <div class="flex header_flex">
+        <div class="logo"
+          ><a href="#"
+            ><img
+              src="img/pronavi_logo.png"
+              class="pronavi_logo"
+              alt="プロナビロゴ" /></a
+        ></div>
+        <nav>
+          <ul class="flex">
+            <li><a href="index.html">トップ</a></li>
+            <li><a href="index2.html">冒険の記録</a></li>
+            <li><a href="#entryform">参加申込</a></li>
+          </ul>
+        </nav>
+        <div class="toggle_btn">
+          <span></span>
+          <span></span>
+          <div class="hamburgerText">menu</div>
+        </div>
+        <div class="mask"></div>
+      </div>
+    </header>
+
+    <section id="introduction">
+      <h2 class="introduction_title">君の冒険は、ここから始まる</h2>
+      <div class="introduction_text">
+        学ぶのが楽しくなるのは、仲間がいるから。<br />定期的なイベントではないけれど、<br />ひとつの出会いが大きな転機になるかもしれません。<br />初参加・初心者大歓迎！<br />
+        仲間ができると、学びがもっと楽しくなる。<br />次のオフ会で、新しい冒険の一歩を踏み出してみませんか？</div
+      >
+    </section>
+
+    <div class="decoration">
+      <div class="scroll-infinity">
+        <!--キャラクターライン-->
+        <div class="scroll-infinity__wrap">
+          <ul class="scroll-infinity__list scroll-infinity__list--left">
+            <li class="scroll-infinity__item"
+              ><img src="img/character.png"
+            /></li>
+            <li class="scroll-infinity__item"
+              ><img src="img/character.png"
+            /></li>
+            <li class="scroll-infinity__item"
+              ><img src="img/character.png"
+            /></li>
+            <li class="scroll-infinity__item"
+              ><img src="img/character.png"
+            /></li>
+            <li class="scroll-infinity__item"
+              ><img src="img/character.png"
+            /></li>
+            <li class="scroll-infinity__item"
+              ><img src="img/character.png"
+            /></li>
+          </ul>
+          <ul class="scroll-infinity__list scroll-infinity__list--left">
+            <li class="scroll-infinity__item"
+              ><img src="img/character.png" class="line_decoration"
+            /></li>
+            <li class="scroll-infinity__item"
+              ><img src="img/character.png"
+            /></li>
+            <li class="scroll-infinity__item"
+              ><img src="img/character.png"
+            /></li>
+            <li class="scroll-infinity__item"
+              ><img src="img/character.png" class="line_decoration"
+            /></li>
+            <li class="scroll-infinity__item"
+              ><img src="img/character.png"
+            /></li>
+            <li class="scroll-infinity__item"
+              ><img src="img/character.png"
+            /></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="container">
+        <section id="information">
+          <div class="center">
+            <h2 class="information_title">次回のオフ会情報</h2>
+          </div>
+          <div class="flex information_flex">
+            <div class="detail">
+              <dl>
+                <div class="form-row">
+                  <dt>日時:</dt>
+                  <dd>2025年6月14日（土）午後予定</dd>
+                </div>
+
+                <div class="form-row">
+                  <dt>開催場所:</dt>
+                  <dd>近日中に公開予定！</dd>
+                </div>
+
+                <div class="form-row">
+                  <dt>参加費:</dt>
+                  <dd>上限10,000円程度</dd>
+                </div>
+
+                <div class="form-row">
+                  <dt>持ち物:</dt>
+                  <dd>やる気・好奇心・ちょっとの勇気</dd>
+                </div>
+              </dl>
+              <p class="caution">
+                正式な場所は登録者に先行でご案内します。<br />
+                参加を検討中の方は、ひとまず「冒険者登録」を！</p
+              >
+            </div>
+            <div class="map">
+              <img src="img/map.png" alt="次回オフ会開催地地図：詳細未定" />
+              <div class="map_text">
+                <p class="top_text">coming soon...</p>
+                <p class="sub_text">開催地は現在調整中</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <main>
+          <section id="entryform">
+            <h1>冒険者登録フォーム</h1>
+            <p
+              >君も仲間になろう！次回のオフ会に参加するには、以下の情報を入力してください。</p
+            >
+
+            <form action="submit" method="post">
+              <div class="form-group column">
+                <label for="name"
+                  >▶ 冒険者名<span class="must">必須</span></label
+                >
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  placeholder="例：タカシ"
+                />
+              </div>
+
+              <div class="form-group column">
+                <label for="email"
+                  >▶ メールアドレス<span class="must">必須</span></label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  placeholder="例：takashi@example.com"
+                />
+              </div>
+
+              <div class="form-group column">
+                <label for="level"
+                  >▶ コーディングレベル<span class="must">必須</span></label
+                >
+                <select id="level" name="level" required>
+                  <option value="">--選択してください--</option>
+                  <option value="beginner">初心者</option>
+                  <option value="intermediate">中級者</option>
+                  <option value="advanced">上級者</option>
+                </select>
+              </div>
+
+              <div class="form-group column">
+                <label for="message"
+                  >▶ コメント<span class="optional">任意</span></label
+                >
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="4"
+                  placeholder="もしよければ、参加のきっかけや携わっていることを教えてください"
+                ></textarea>
+              </div>
+              <div class="center">
+                <button type="submit" class="pixel-button"
+                  >仲間になる <span class="arrow">▼</span></button
+                >
+              </div>
+            </form>
+          </section>
+        </main>
+      </div>
+
+      <div class="scroll-infinity">
+        <!--キャラクターライン-->
+        <div class="scroll-infinity__wrap">
+          <ul class="scroll-infinity__list scroll-infinity__list--right">
+            <li class="scroll-infinity__item"
+              ><img src="img/character.png"
+            /></li>
+            <li class="scroll-infinity__item"
+              ><img src="img/character.png"
+            /></li>
+            <li class="scroll-infinity__item"
+              ><img src="img/character.png"
+            /></li>
+            <li class="scroll-infinity__item"
+              ><img src="img/character.png"
+            /></li>
+            <li class="scroll-infinity__item"
+              ><img src="img/character.png"
+            /></li>
+            <li class="scroll-infinity__item"
+              ><img src="img/character.png"
+            /></li>
+          </ul>
+          <ul class="scroll-infinity__list scroll-infinity__list--right">
+            <li class="scroll-infinity__item"
+              ><img src="img/character.png"
+            /></li>
+            <li class="scroll-infinity__item"
+              ><img src="img/character.png"
+            /></li>
+            <li class="scroll-infinity__item"
+              ><img src="img/character.png"
+            /></li>
+            <li class="scroll-infinity__item"
+              ><img src="img/character.png"
+            /></li>
+            <li class="scroll-infinity__item"
+              ><img src="img/character.png"
+            /></li>
+            <li class="scroll-infinity__item"
+              ><img src="img/character.png"
+            /></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <footer id="footer">
+      <nav>
+        <ul class="flex">
+          <li><a href="index.html">トップ</a></li>
+          <li><a href="index2.html">冒険の記録</a></li>
+          <li><a href="#entryform">参加申込</a></li>
+        </ul>
+      </nav>
+
+      <p>Powered by 株式会社NoE</p>
+      <img src="img/noe_logo.png" alt="株式会社NOEのロゴ" />
+      <div class="copyright"><small>&copy; 2025 Pronavi Hsckathon</small></div>
+    </footer>
+
+    <!--追従ボタン-->
+    <a href="index.html" id="backToTop" title="ゲームに戻る">ゲームに戻る</a>
+
+    <script src="js/main3.js"></script>
+  </body>
+</html>

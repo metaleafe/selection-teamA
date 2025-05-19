@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.11.0/dist/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/CSSRulePlugin.min.js"></script>
+
+    <title>プログラミング初心者の君へ｜学び仲間と出会えるオフ会</title>
+    <meta
+      name="description"
+      content="RPG風デザインでオフ会を楽しく紹介。プログラミング学習中の仲間とつながる第一歩を応援する参加者募集サイトです。"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/common.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Crimson+Text&family=DotGothic16&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header id="header">
+      <div class="flex header_flex">
+        <div class="logo"
+          ><a href="#"
+            ><img
+              src="img/pronavi_logo.png"
+              class="pronavi_logo"
+              alt="プロナビロゴ" /></a
+        ></div>
+        <nav>
+          <ul class="flex">
+            <li><a href="#">トップ</a></li>
+            <li><a href="index2.html">冒険の記録</a></li>
+            <li><a href="contact.html">参加申込</a></li>
+          </ul>
+        </nav>
+        <div class="toggle_btn">
+          <span></span>
+          <span></span>
+          <div class="hamburgerText">menu</div>
+        </div>
+        <div class="mask"></div>
+      </div>
+    </header>
+    <div class="loader">Loading...</div>
+
+    <div id="intro-container" class="intro-screen">
+      <div id="intro-text" class="intro-text"></div>
+      <div id="intro-choices" class="choices" style="display: none">
+        <button onclick="startAdventure(true)">はい（音楽ON）</button>
+        <button onclick="startAdventure(false)">はい（音楽OFF）</button>
+      </div>
+    </div>
+
+    <!-- <audio id="bgm" src="/se/Nigiwau_machi.mp3" loop></audio> -->
+
+    <div class="grid">
+      <main>
+        <section id="top">
+          <h1
+            >Adventurer's Website<span
+              >勇気を出せば、仲間との出会いが待っている</span
+            ></h1
+          >
+        </section>
+      </main>
+      <div id="gameContainer">
+        <div id="howToPlayModal" class="modal hidden">
+          <div class="modal-content">
+            <div class="modal-header">
+              <span class="modal-title">遊び方</span>
+              <button id="closeHowToPlayBtn" class="close-button">×</button>
+            </div>
+            <div class="modal-body">
+              <p
+                >💬 街の人たちが何やら有益な話を知っているみたい！<br />
+                近づいてタップやクリックで話しかけてみよう！</p
+              >
+              <p>🥬 どうやらこの街の野菜は喋る…らしい？</p>
+              <p>🖱️ または [WASDキー] でキャラクターを自由に動かせます。</p>
+              <p
+                >🧍この冒険者[キャラクター]
+                はあなた自身。世界を探検してみて！</p
+              >
+              <p
+                >🗺️ ヘッダーのアイコンからも各コンテンツにアクセスできます。<br />気になるものをタップしてみよう！</p
+              >
+            </div>
+          </div>
+        </div>
+
+        <canvas> </canvas>
+        <div id="bgm-controls">
+          <span id="mute-toggle" role="button"
+            ><span id="mute-icon">🎵</span> BGM音量：</span
+          >
+          <input
+            type="range"
+            id="bgm-volume"
+            min="0"
+            max="1"
+            step="0.01"
+            value="0.5"
+          />
+          <audio id="bgm" src="./se/Nigiwau_machi.mp3" loop></audio>
+        </div>
+
+        <div id="dialogueBox" class="dialogue-box hidden">
+          <div class="dialogue-window">
+            <div id="dialogueName"></div>
+            <div id="dialogueText"></div>
+            <div id="nextArrow" class="next-arrow">▼</div>
+          </div>
+
+          <div id="choiceBox" class="choice-box hidden">
+            <button>はい</button>
+            <button>いいえ</button>
+          </div>
+        </div>
+      </div>
+      <footer id="footer">
+        <div class="copyright"
+          ><small>&copy; 2025 Pronavi Hsckathon</small></div
+        >
+      </footer>
+    </div>
+    <script src="https://unpkg.com/easystarjs@0.4.4/bin/easystar-0.4.4.js"></script>
+    <script src="data/collision.js"></script>
+    <script src="classes/Sprite.js"></script>
+    <script src="classes/Boundary.js"></script>
+    <script src="classes/Npc.js"></script>
+    <script src="index.js"></script>
+    <script src="js/main3.js"></script>
+  </body>
+</html>

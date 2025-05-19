@@ -1,0 +1,258 @@
+@charset "UTF-8";
+/* ========================
+   基本要素
+======================== */
+
+li {
+    list-style: none;
+}
+
+a {
+    color: #202124;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.flex {
+    display: flex;
+}
+
+/* ========================
+   header
+======================== */
+
+#header {
+    padding: 0px 30px;
+    background-color: #ffffff;
+    z-index: 500;
+    position: relative;
+}
+
+.pronavi_logo {
+    width: 80px;
+}
+
+.header_flex {
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav ul {
+    gap: 40px;
+}
+
+nav li::before {
+    background-image: url("../img/heart.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    content: "";
+    display: inline-block;
+    height: 20px;
+    margin-right: 4px;
+    vertical-align: middle;
+    width: 24px;
+}
+
+/* header ハンバーガーメニュー */
+#header .toggle_btn {
+    width: 32px;
+    height: 24px;
+    position: relative;
+    z-index: 80;
+    display: none;
+}
+
+#header .toggle_btn span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #202124;
+    position: absolute;
+    transition: all 0.5s;
+    z-index: 100;
+}
+
+#header .toggle_btn span:nth-child(2) {
+    top: 50%;
+}
+
+#header .toggle_btn .hamburgerText {
+    margin-top: 24px;
+}
+
+#header .mask {
+    background-color: #ffd921;
+    border: 4px solid #ffffff;
+    cursor: pointer;
+    height: 300px;
+    opacity: 0;
+    position: fixed;
+    right: -100px;
+    top: 0;
+    transition: all 0.5s;
+    visibility: hidden;
+    width: 165px;
+    z-index: 10;
+}
+
+@media screen and (max-width: 900px) {
+    #header .toggle_btn {
+        display: block;
+    }
+
+    #header nav {
+        opacity: 0;
+        padding-inline: 22px;
+        position: fixed;
+        right: -100px;
+        top: 100px;
+        transition: transform 0.8s ease, opacity 0.8s ease;
+        visibility: hidden;
+        width: 165px;
+    }
+
+    #header ul {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    #header ul li {
+        border-bottom: 1px solid #202124;
+        padding: 0 0 10px 0;
+    }
+
+    #header ul li:first-child ::after {
+        background-color: #202141;
+        content: "";
+        height: 0.5px;
+        left: 6px;
+        position: absolute;
+        right: 5px;
+        top: -20px;
+    }
+
+    #header.open .mask {
+        opacity: 1;
+        right: 0;
+        visibility: visible;
+    }
+
+    #header.open nav {
+        opacity: 1;
+        right: 0;
+        visibility: visible;
+        z-index: 900;
+    }
+
+
+    #header.open .toggle_btn span:nth-child(1) {
+        top: 25%;
+        transform: rotate(-45deg);
+    }
+
+    #header.open .toggle_btn span:nth-child(2) {
+        top: 25%;
+        transform: rotate(45deg);
+    }
+
+}
+
+/* ========================
+   button
+======================== */
+.pixel-button {
+    align-items: center;
+    background: #ffd921;
+    border: 2px solid #202124;
+    box-shadow:
+        4px 4px 0 #555,
+        /* 濃い影 */
+        2px 2px 0 #202124;
+    /* 黒い縁取り */
+    color: #202124;
+    cursor: pointer;
+    display: inline-flex;
+    font-weight: 500;
+    gap: 8px;
+    padding: 8px 32px;
+    position: relative;
+
+}
+
+.pixel-button:hover {
+    background: #202124;
+    color: #ffffff;
+}
+
+.arrow {
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+
+/* ========================
+   footer
+======================== */
+#footer {
+    margin-block: 30px;
+    text-align: center;
+}
+
+#footer ul {
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+#footer p {
+    color: #6863EB;
+    font-size: 0.625rem;
+    margin-bottom: -6px;
+}
+
+#footer img {
+    width: 60px;
+}
+
+@media screen and (max-width: 900px) {
+    #footer li {
+        font-size: clamp(12px, 3vw, 16px);
+    }
+}
+
+/* ========================
+   追従ボタン
+======================== */
+
+#backToTop {
+    background: #ffd921;
+    border: 2px solid #202124;
+    box-shadow:
+        4px 4px 0 #555,
+        2px 2px 0 #202124;
+    color: #202124;
+    cursor: pointer;
+    font-size: 12px;
+    opacity: 0.8;
+    padding: 8px 12px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    text-decoration: none;
+    transition: opacity 0.3s;
+    z-index: 1000;
+}
+
+#backToTop:hover {
+    opacity: 1;
+}
